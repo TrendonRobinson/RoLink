@@ -25,8 +25,14 @@ ReactJs and Django
 ## Models
 ### V1:
 User Model
-Post Model
-Product Model
+#### Post Model
+- Post Content
+- Author
+- Time
+#### Product Model
+- Content
+- Price
+- Creator
 
 ### V2:
 Saves/Bookmarks Model
