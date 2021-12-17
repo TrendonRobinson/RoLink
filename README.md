@@ -2,48 +2,49 @@
 
 ## Project Links
 
-- [add your github repo link]()
 - [add your deployment link]()
+
+## Project Schedule
+
+|  Day | Deliverable | Status
+|---|---| ---|
+|Day 1| Project Description | Complete
+|Day 2-4| Core Application Structure | Incomplete
+|Day 5-6| MVP & Bug Fixes | Incomplete
+|Day 6-7| Final Touches | Incomplete
+|Day 8| Present | Incomplete
 
 ## Project Description
 
-This project is going to be used to bidge the disconnect between roblox users that are selling assets from the ones that are looking to buy assets.
-
-## API
-
-Use this section to include info about the API you have chosen and a code snippet of the data that it returns and is required for your project. 
-
-
-```
-{data: {} }
-```
+This project is going to be used to bidge the disconnect between roblox users that are selling assets from the ones that are looking to buy assets. This will be used to build your network in the development community, sharing your creations with the public, obtaining the creations of others, and having everything more accessible.
 
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
-
-- [add link to your wireframes]()
-- [add link to your react architecture]()
+In the Planning Branch
 
 
-### MVP/PostMVP - 5min
+### MVP/PostMVP
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP EXAMPLE
-- Find and use external api 
-- Render data on page 
-- Allow user to interact with the page
+- User authentication
+- Login/Signup
+- Product Display
+- Posting
+
 
 #### PostMVP EXAMPLE
 
-- Add localStorage or firebase for storage
+- Post reactions
+- Posting Products
 
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
 Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
+
 
 | Component | Description | 
 | --- | :---: |  
@@ -52,23 +53,18 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Footer | This will render the header include the nav | 
 
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
+# Time Frame
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Nav-bar | H | 15m| 0 | TBA |
+| Sign-In | H | 1hr| 0 | TBA |
+| Sign-Up | H | 1hr| 0 | TBA |
+| Product | H | 30m| 0 | TBA |
+| User-Post | H | 30m| 0 | TBA |
+| Styling | H | 5hrs| 0 | TBA |
+| Total | H | 8hrs| 5hrs | TBA |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
+ TBD
 
-## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
