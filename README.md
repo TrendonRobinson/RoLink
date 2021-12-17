@@ -19,6 +19,19 @@
 This project is going to be used to bidge the disconnect between roblox users that are selling assets from the ones that are looking to buy assets. This will be used to build your network in the development community, sharing your creations with the public, obtaining the creations of others, and having everything more accessible.
 
 
+## Technologies
+ReactJs and Django
+
+## Models
+### V1:
+User Model
+Post Model
+Product Model
+
+### V2:
+Saves/Bookmarks Model
+
+
 ## Wireframes
 
 In the Planning Branch
@@ -60,6 +73,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Nav-bar | H | 15m| 0 | TBA |
 | Sign-In | H | 1hr| 0 | TBA |
 | Sign-Up | H | 1hr| 0 | TBA |
+| Post | H | 1hr| 0 | TBA |
 | Product | H | 30m| 0 | TBA |
 | User-Post | H | 30m| 0 | TBA |
 | Styling | H | 5hrs| 0 | TBA |
