@@ -3,18 +3,7 @@ import './App.css';
 import axios from "axios";
 import { useState, useEffect } from 'react';
 
-function App() {
-  let [test, setTest] = useState('')
-
-  useEffect(() => {
-    axios
-      .get("/api/users")
-      .then((res) => setTest(res.data))
-      .catch((err) => console.log(err));
-  }, [])
-  
-
-  console.log(test)
+export default function register() {
 
   return (
     <div className="App">
@@ -36,5 +25,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
