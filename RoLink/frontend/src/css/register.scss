@@ -25,7 +25,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        // align-items: center;
 
         .Name {
             display: flex;
@@ -33,6 +33,7 @@
         }
 
         .Submit {
+            align-self: center;
             margin-top: 20px;
             width: 35%;
             border: none;
@@ -41,10 +42,11 @@
         }
 
         .Field {
-            width: 80%;
+            padding: 5px 20px;
+            width: 100%;
             label {
                 position: absolute;
-                transform: translate(0%, 60%);
+                // transform: translate(0%, 60%);
                 font-size: 100%;
                 color: #d3d3d3;
                 transition: 0.2s all;
@@ -59,13 +61,17 @@
                 border-bottom: 2px solid #d3d3d3;
                 box-shadow: none;
                 color: #111;
+                transition: 0.5s;
             }
 
-            input:focus ~ label,
-            input:valid ~ label {
-                font-size: 14px;
-                top: -24px;
-                color: #00dd22;
+            input:hover {
+                border-color: #ff3f3f73;
+                transition: 0.5s;
+            }
+
+            input:focus {
+                border-color: #ff3f3f;
+                transition: 0.5s;
             }
         }
     }

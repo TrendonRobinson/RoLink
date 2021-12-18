@@ -12,29 +12,24 @@ export default function Register(Props) {
                         <form>
                             <div className="Name">
                                 <div className="Field">
-                                    <label>First Name</label>
-                                    <input type="text" placeholder="" />
+                                    <input type="text" placeholder="First Name" />
                                 </div>
                                 <div className="Field">
-                                    <label>Last Name</label>
-                                    <input type="text" placeholder="" />
+                                    <input type="text" placeholder="Last Name" />
                                 </div>
                             </div>
                             
                             <div className="Field">
-                                <label>Email</label>
-                                <input type="email" placeholder="" />
+                                <input type="email" placeholder="Email" />
                             </div>
                             
                             
                             <div className="Field">
-                                <label>Password</label>
-                                <input type="password" placeholder="" />
+                                <input type="password" placeholder="Password" />
                             </div>
 
                             <div className="Field">
-                                <label>Confirm Password</label>
-                                <input type="password" placeholder="" />
+                                <input type="password" placeholder="Confirm" />
                             </div>
 
                             <input className="Submit" type="button" value="Submit" />
