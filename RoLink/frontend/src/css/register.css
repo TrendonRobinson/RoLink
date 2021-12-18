@@ -1,1 +1,103 @@
-/* No CSS *//*# sourceMappingURL=register.css.map */
+.background {
+  background-color: #ff3f3f;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-box {
+  width: 50vw;
+  height: auto;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+  border-radius: 3px;
+  text-align: center;
+  -webkit-filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+}
+
+.signup-box form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-box form .Name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.signup-box form .Submit {
+  margin-top: 20px;
+  width: 35%;
+  border: none;
+  color: white;
+  background-color: #ff3f3f;
+}
+
+.signup-box form .Field {
+  width: 80%;
+}
+
+.signup-box form .Field label {
+  position: absolute;
+  -webkit-transform: translate(0%, 60%);
+          transform: translate(0%, 60%);
+  font-size: 100%;
+  color: #d3d3d3;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  cursor: text;
+}
+
+.signup-box form .Field input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #d3d3d3;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #111;
+}
+
+.signup-box form .Field input:focus ~ label,
+.signup-box form .Field input:valid ~ label {
+  font-size: 14px;
+  top: -24px;
+  color: #00dd22;
+}
+
+.Field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=register.css.map */

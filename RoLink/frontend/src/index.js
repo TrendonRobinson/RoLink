@@ -4,12 +4,24 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+
+// Pages
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+      </Routes>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

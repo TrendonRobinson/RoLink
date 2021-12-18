@@ -1,27 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
 import axios from "axios";
 import { useState, useEffect } from 'react';
 
-export default function register() {
+import "../css/register.css"
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {/* Edit <code>src/App.js</code> and save to reload. */}
-          
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function Register(Props) {
+
+    return (
+        <div className="background">
+            <div class="signup-box">
+                        <h1>Sign Up</h1>
+                        <form>
+                            <div className="Name">
+                                <div className="Field">
+                                    <label>First Name</label>
+                                    <input type="text" placeholder="" />
+                                </div>
+                                <div className="Field">
+                                    <label>Last Name</label>
+                                    <input type="text" placeholder="" />
+                                </div>
+                            </div>
+                            
+                            <div className="Field">
+                                <label>Email</label>
+                                <input type="email" placeholder="" />
+                            </div>
+                            
+                            
+                            <div className="Field">
+                                <label>Password</label>
+                                <input type="password" placeholder="" />
+                            </div>
+
+                            <div className="Field">
+                                <label>Confirm Password</label>
+                                <input type="password" placeholder="" />
+                            </div>
+
+                            <input className="Submit" type="button" value="Submit" />
+                        </form>
+                    </div>
+        </div>
+      );
 }
