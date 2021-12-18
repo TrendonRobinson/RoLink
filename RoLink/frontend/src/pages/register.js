@@ -8,7 +8,7 @@ export default function Register(Props) {
     return (
         <div className="background">
             <div class="signup-box">
-                        <h1>Sign Up</h1>
+                        <h1>Register</h1>
                         <form>
                             <div className="Name">
                                 <div className="Field">
