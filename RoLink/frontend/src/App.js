@@ -1,6 +1,10 @@
-import logo from './logo.svg';
+import icon from './images/icon.png';
+import logo from './images/LOGO.png'
+
 import './App.css';
+
 import axios from "axios";
+
 import { useState, useEffect } from 'react';
 import React from "react";
 import {
@@ -9,6 +13,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
+
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   let [test, setTest] = useState('')
@@ -28,7 +36,7 @@ function App() {
       <header className="App-header">
         <nav>
           <div className='Icon-Div'>
-            <img src={logo} className="App-logo" alt="logo" />
+            <img src={icon} className="App-icon" alt="icon" />
           </div>
           <div className="Buttons">
             <Link to='/register'>Register</Link>
@@ -37,9 +45,18 @@ function App() {
         </nav>
 
         <div className='Logo-Div'>
-          
+          <img src={logo} className="App-icon" alt="logo" />
+          <Link to='/register'>Get Started</Link>
         </div>
       </header>
+      <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+        </Switch>
     </div>
   );
 }
