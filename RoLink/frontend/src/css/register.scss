@@ -35,10 +35,20 @@
         .Submit {
             align-self: center;
             margin-top: 20px;
+            padding: 10px 0px;
             width: 35%;
             border: none;
             color: white;
             background-color: #ff3f3f;
+            border: 1px solid #ff3f3f00;
+            transition: 0.5s;
+        }
+
+        .Submit:hover {
+            color: #ff3f3f;
+            background-color: white;
+            border: 1px solid #ff3f3f;
+            transition: 0.5s;
         }
 
         .Field {
