@@ -1,0 +1,25 @@
+.App {
+    text-align: center;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px;
+
+        .Buttons {
+            margin: auto 0px;
+
+            a {
+                padding-left: 10px;
+            }
+        }
+
+        .App-logo {
+            height: 8vmin;
+        }
+    }
+
+    .Logo-Div {
+        background-color: red;
+    }
+}
