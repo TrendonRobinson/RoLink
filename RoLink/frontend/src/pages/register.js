@@ -30,6 +30,7 @@ export default function Register(Props) {
         first: "", 
         last: "",
         email: "",
+        username: "",
         password: "",
         confirm: ""
     })
@@ -126,6 +127,11 @@ export default function Register(Props) {
                             <div className="Field">
                                 {validEmail ? '' : <p>Invalid Valid</p>}
                                 <input name="email"  onChange={handleChange} type="email" placeholder="Email" value={inputs.email} />
+                            </div>
+
+                            <div className="Field">
+                                {/* {validEmail ? '' : <p>Invalid Valid</p>} */}
+                                <input name="username"  onChange={handleChange} type="username" placeholder="Username" value={inputs.username} />
                             </div>
                             
                             

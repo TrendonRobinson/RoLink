@@ -47,6 +47,7 @@ def get_default_profile_image():
 class Account(AbstractBaseUser):
     email = models.EmailField(verbose_name='email', max_length=60, unique=True)
     username = models.CharField(max_length=30, unique=True)
+    password = models.CharField(max_length=30)
     first = models.CharField(max_length=30, unique=False)
     last = models.CharField(max_length=30, unique=False)
     date_joined = models.DateTimeField(
