@@ -10,6 +10,7 @@
 
 .signup-box {
     width: 50vw;
+    max-width: 35vw;
     height: auto;
     margin: auto;
     padding-top: 20px;
@@ -54,6 +55,16 @@
         .Field {
             padding: 5px 20px;
             width: 100%;
+
+            p {
+                margin: 0px 0px;
+                padding: 0px 0px;
+
+                color: #ff3f3f;
+                text-align: left;
+                font-size: 80%;
+            }
+
             label {
                 position: absolute;
                 // transform: translate(0%, 60%);
