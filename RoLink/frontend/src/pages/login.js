@@ -20,7 +20,7 @@ export default function Login() {
   useEffect(() => {
     axios
       .get("/api/users")
-      .then((res) => setTest(res.data))
+      .then((res) => setUsers(res.data))
       .catch((err) => console.log(err));
   }, [])
 
