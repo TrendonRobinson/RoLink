@@ -59,7 +59,15 @@ export default function Register(Props) {
 
             const postRequest = async () => {
                 try {
-                    const resp = await axios.post(url, {email: inputs.email, username: inputs.first, password: inputs.password});
+                    const resp = await axios.post(url, {
+                        "email": inputs.email,
+                        "username": inputs.first,
+                        "password": inputs.password,
+                        "first": inputs.first,
+                        "last": inputs.last,
+                        "is_admin": false,
+                        "is_staff": false
+                    });
                     console.log(resp.data);
                 } catch (err) {
                     console.error(err);

@@ -1,5 +1,6 @@
 from rest_framework import viewsets
 from django.contrib.auth.models import User
+from .models import Account
 from django.shortcuts import render
 from .serializers import UserSerializer
 
@@ -7,5 +8,5 @@ from .serializers import UserSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
+    queryset = Account.objects.all()
     serializer_class = UserSerializer
