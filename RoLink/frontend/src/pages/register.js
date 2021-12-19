@@ -48,13 +48,24 @@ export default function Register(Props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        let url = "http://127.0.0.1:8000/api/users/"
 
         console.log(canSubmit, inputs)
 
         if (canSubmit) {
-            axios.post("/api/users", inputs) // 4
-                .then(res => alert("Form Submitted")) // 5
-                .catch(errors => console.log(errors)) // 6
+            // axios.post(url, inputs) // 4
+            //     .then(res => alert("Form Submitted")) // 5
+            //     .catch(errors => console.log(errors)) // 6
+
+            const postRequest = async () => {
+                try {
+                    const resp = await axios.post(url, {email: inputs.email, username: inputs.first, password: inputs.password});
+                    console.log(resp.data);
+                } catch (err) {
+                    console.error(err);
+                }
+            }
+            postRequest()
         }
     }
 
