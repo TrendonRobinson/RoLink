@@ -14,22 +14,37 @@ import {
   Routes
 } from "react-router-dom";
 
+// Pages
+import Login from './pages/Login';
+import Register from './pages/Register';
+
 
 function App() {
-  let [test, setTest] = useState('')
+  let [users, setUsers] = useState('')
 
-  useEffect(() => {
+  function fetch() {
     axios
       .get("/api/users")
-      .then((res) => setTest(res.data))
+      .then((res) => setUsers(res.data))
       .catch((err) => console.log(err));
+  }
+
+  useEffect(() => {
+    fetch()
   }, [])
   
 
-  console.log(test)
+  console.log(users)
 
   return (
     <div className='App'>
+
+      <Routes>
+        {/* <Route path="/" element={<App />} /> */}
+        <Route path="login" element={<Login userState={[users, fetch]} fetch={fetch} />} />
+        <Route path="register" element={<Register />} />
+      </Routes>
+
         <div className="App-header">
         <nav>
           <div className='Icon-Div'>
@@ -46,6 +61,9 @@ function App() {
         </div>
       </div>
     </div>
+
+
+      
   );
 }
 

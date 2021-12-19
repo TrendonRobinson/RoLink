@@ -17,11 +17,7 @@ import Register from './pages/Register';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-      </Routes>
+      <App/>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

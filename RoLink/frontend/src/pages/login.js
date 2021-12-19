@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 import "../css/register.css"
 
-export default function Login() {
+export default function Login(props) {
 
   let url = "http://127.0.0.1:8000/api/users/"
 
@@ -34,19 +34,21 @@ export default function Login() {
       .then((res) => setUsers(res.data))
       .catch((err) => console.log(err));
 
-}
+  }
 
-const handleChange = (e) => {
-    const value = e.target.value
-    const name = e.target.name
-    const copy = Object.assign({}, inputs)
+  const handleChange = (e) => {
+      const value = e.target.value
+      const name = e.target.name
+      const copy = Object.assign({}, inputs)
 
-    copy[name] = value
+      copy[name] = value
 
-    setInputs(copy)
+      setInputs(copy)
 
-    
-}
+      
+  }
+
+  console.log(users)
 
   return (
     <div className="background">
