@@ -17,14 +17,16 @@ import {
 // Pages
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Home from './pages/Home'
 
 
 function App() {
   let [users, setUsers] = useState('')
+  let [account, setAccount] = useState(null)
 
   function fetch() {
     axios
-      .get("/api/users")
+      .get("accounts/users/")
       .then((res) => setUsers(res.data))
       .catch((err) => console.log(err));
   }
@@ -41,8 +43,9 @@ function App() {
 
       <Routes>
         {/* <Route path="/" element={<App />} /> */}
-        <Route path="login" element={<Login userState={[users, fetch]} fetch={fetch} />} />
+        <Route path="login" element={<Login userState={[users, fetch]} fetch={fetch} account={[account, setAccount]}/>} />
         <Route path="register" element={<Register />} />
+        <Route path="home" element={<Home />}/>
       </Routes>
 
         <div className="App-header">

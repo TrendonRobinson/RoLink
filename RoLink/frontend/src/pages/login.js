@@ -1,38 +1,53 @@
 import axios from "axios";
 import { useState, useEffect } from 'react';
 
+import { useNavigate } from "react-router-dom";
+
 import "../css/register.css"
 
 export default function Login(props) {
 
-  let url = "http://127.0.0.1:8000/api/users/"
+  let navigate = useNavigate();
+  let url = "http://127.0.0.1:8000/sign-in/"
 
 
   // States
   let [users, setUsers] = useState([])
+  let [invalid, setInvalid] = useState(true)
   let [inputs, setInputs] = useState({
     email: '',
     password: ''
   })
 
+  let accountTools = props.account
+  let account = accountTools[0]
+  let setAccount = accountTools[1]
 
-  // useEffect
-  useEffect(() => {
-    axios
-      .get("/api/users")
-      .then((res) => setUsers(res.data))
-      .catch((err) => console.log(err));
-  }, [])
+  if (account !== null){
+    navigate(`/home`);
+  }
 
 
   // Functions
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    axios
-      .get("/api/users")
-      .then((res) => setUsers(res.data))
-      .catch((err) => console.log(err));
+    const postRequest = async () => {
+      try {
+          const resp = await axios.post(url, {
+              "user" : {
+                  "email": inputs.email,
+                  "password": inputs.password,
+              }
+          });
+          if (resp) {
+            setAccount(account)
+          }
+      } catch (err) {
+          console.error(err);
+      }
+  }
+  postRequest()
 
   }
 
@@ -47,8 +62,6 @@ export default function Login(props) {
 
       
   }
-
-  console.log(users)
 
   return (
     <div className="background">

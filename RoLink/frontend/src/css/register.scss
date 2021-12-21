@@ -45,6 +45,11 @@
             transition: 0.5s;
         }
 
+        Button {
+            padding: 10px 0px;
+            width: 35%;
+        }
+
         .Submit:hover {
             color: #ff3f3f;
             background-color: white;

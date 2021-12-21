@@ -1,9 +1,15 @@
 import axios from "axios";
 import { useState, useEffect } from 'react';
 
+import { useNavigate } from "react-router-dom";
+
 import validator from 'validator'
 
 import "../css/register.css"
+
+// Material UI
+import FlatButton from '@mui/material/Button';
+
 
 let passwordValidator = require('password-validator');
 
@@ -20,6 +26,8 @@ schema
 .is().not().oneOf(['Passw0rd', 'Password123']); // Blacklist these values
 
 export default function Register(Props) {
+
+    let navigate = useNavigate();
     
     // States
     const [validEmail, setValidEmail] = useState(true)
@@ -49,9 +57,10 @@ export default function Register(Props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        let url = "http://127.0.0.1:8000/api/users/"
+        let url = "http://127.0.0.1:8000/sign-up"
+        
 
-        console.log(canSubmit, inputs)
+        // console.log(canSubmit, inputs)
 
         if (canSubmit) {
             // axios.post(url, inputs) // 4
@@ -61,13 +70,13 @@ export default function Register(Props) {
             const postRequest = async () => {
                 try {
                     const resp = await axios.post(url, {
-                        "email": inputs.email,
-                        "username": inputs.first,
-                        "password": inputs.password,
-                        "first": inputs.first,
-                        "last": inputs.last,
-                        "is_admin": false,
-                        "is_staff": false
+                        "user" : {
+                            "email": inputs.email,
+                            // "username": inputs.first,
+                            "password": inputs.password,
+                            "first": inputs.first,
+                            "last": inputs.last,
+                        }
                     });
                     console.log(resp.data);
                 } catch (err) {
@@ -76,6 +85,9 @@ export default function Register(Props) {
             }
             postRequest()
         }
+
+        navigate(`/login`);
+        console.log('')
     }
 
     const handleChange = (e) => {
@@ -144,7 +156,17 @@ export default function Register(Props) {
                                 {matching ? '' : <p>Does not match password</p>}
                                 <input name="confirm" onChange={handleChange} type="password" placeholder="Confirm" value={inputs.confirm} />
                             </div>
-                            <input className="Submit" type="submit" value="Submit" />
+                            {/* <input className="Submit" type="submit" value="Submit" /> */}
+                            <FlatButton style={{
+                                    alignSelf: 'center',
+                                    marginTop: '20px',
+                                    padding: '10px 100px',
+                                    // marginRight: '20px',
+                                    width: 60,
+                                    backgroundColor: '#ff3f3f',
+                                    border: '1px solid #ff3f3f00',
+                                    transition: '0.5s'
+                                    }} variant="contained" type="submit" value="Submit" >Submit</FlatButton>
                         </form>
                     </div>
         </div>
