@@ -63,7 +63,7 @@ export default function Register(Props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        let url = "http://127.0.0.1:8000/sign-up"
+        let url = "https://django-test-upload.herokuapp.com/sign-up/"
         
 
         // console.log(canSubmit, inputs)

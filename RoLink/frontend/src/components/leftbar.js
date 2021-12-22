@@ -3,7 +3,10 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
+import PanelButton from './panelButton'
 
+
+import './leftbar.css'
 
 
 export default function LeftBar(props) {
@@ -17,7 +20,7 @@ export default function LeftBar(props) {
 
     return (
         <div className="LeftBar">
-            Left
+            <PanelButton/>
         </div>
     );
 }

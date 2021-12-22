@@ -23,13 +23,19 @@ import Feed from '../components/feed'
 
 import AppBar from '../materialUI/AppBar'
 
+
 function App() {
 
   // States
   let [test, setTest] = useState('')
 
 
-  console.log(test)
+  useEffect(() => {
+    localStorage.setItem('user', null)
+  }, [])
+
+  localStorage.setItem('user', null)
+  
 
   return (
     <div className="Home">

@@ -8,7 +8,7 @@ import "../css/register.css"
 export default function Login(props) {
 
   let navigate = useNavigate();
-  let url = "http://127.0.0.1:8000/sign-in/"
+  let url = "https://django-test-upload.herokuapp.com/sign-in/"
 
 
   // States
@@ -51,8 +51,8 @@ export default function Login(props) {
       } catch (err) {
           console.error(err);
       }
-  }
-  postRequest()
+    }
+    postRequest()
 
   }
 
