@@ -1,10 +1,22 @@
 .panelButton {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-
-    padding: 15px 15px;
-    background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding-top: 6%;
+  padding-left: 5%;
+  background-color: rgba(0, 0, 0, 0.1);
 }
+
+.panelButton p {
+  color: #ff3f3f;
+  padding-left: 10px;
+}
+/*# sourceMappingURL=panelButton.css.map */

@@ -1,0 +1,17 @@
+.panelButton {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: left;
+
+    // padding: 15px 0px;
+    padding-top: 6%;
+    padding-left: 5%;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    p {
+        color: #ff3f3f;
+
+        padding-left: 10px;
+    }
+}

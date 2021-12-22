@@ -27,21 +27,39 @@ import AppBar from '../materialUI/AppBar'
 function App() {
 
   // States
-  let [test, setTest] = useState('')
+  let [sideBar, setSideBar] = useState(false);
 
-
+  // useEffect
   useEffect(() => {
-    localStorage.setItem('user', null)
+		console.log(document);
   }, [])
 
-  localStorage.setItem('user', null)
+	function openModal(e) {
+		document.getElementById('LeftBar').classList.add('open');
+		setSideBar(true);
+	}
+	function hideModal(e) {
+		document.getElementById('LeftBar').classList.remove('open');
+		setSideBar(false);
+	}
+
+
+	// Functions
+  function handleOpen(open, e) {
+		console.log(open)
+		if (open) {
+			hideModal(e)
+		} else {
+			openModal(e)
+		}
+	}
   
 
   return (
     <div className="Home">
-      <AppBar />
+      <AppBar sideBar={[sideBar, handleOpen, setSideBar]} />
       <div className="homeContainer"> 
-        <LeftBar/>
+        <LeftBar sideBar={[sideBar]} />
         <Feed/>
         <RightBar/>
       </div>

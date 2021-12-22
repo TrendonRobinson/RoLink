@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACT,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,UAAU,EAAE,IAAI;EAChB,eAAe,EAAE,IAAI;EAGrB,WAAW,EAAE,EAAE;EACf,YAAY,EAAE,EAAE;EAChB,gBAAgB,EAAE,kBAAkB;CAOvC;;AAhBD,AAWI,YAXQ,CAWR,CAAC,CAAC;EACE,KAAK,EAAE,OAAO;EAEd,YAAY,EAAE,IAAI;CACrB",
+    "sources": [
+        "panelButton.scss"
+    ],
+    "names": [],
+    "file": "panelButton.css"
+}

@@ -19,8 +19,10 @@ export default function LeftBar(props) {
 
 
     return (
-        <div className="LeftBar">
-            <PanelButton/>
+        <div id="LeftBar" className="LeftBar">
+            <ul>
+                <PanelButton/>
+            </ul>
         </div>
     );
 }

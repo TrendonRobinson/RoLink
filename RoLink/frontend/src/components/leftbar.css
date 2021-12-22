@@ -1,12 +1,30 @@
 .LeftBar {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  height: 100vh;
+  width: 8%;
+  position: fixed;
+  z-index: -1;
+  background-color: white;
+  /* Black*/
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidebar */
+  -webkit-filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
 }
+
+.LeftBar ul {
+  padding: 10px 10px;
+}
+
+.LeftBar ul li {
+  border-radius: 5px;
+  height: 50px;
+}
+
+.LeftBar.open {
+  width: 14rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=leftbar.css.map */

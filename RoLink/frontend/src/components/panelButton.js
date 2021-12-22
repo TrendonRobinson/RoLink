@@ -2,6 +2,8 @@ import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
+import { red } from '@mui/material/colors';
+
 import './panelButton.css'
 
 
@@ -21,9 +23,9 @@ export default function PanelButton(props) {
 
 
     return (
-        <div className="panelButton">
-            <NewspaperIcon/>
+        <li className="panelButton">
+            <NewspaperIcon sx={{ color: red[500] }}/>
             <p>News feed</p>
-        </div>
+        </li>
     );
 }
