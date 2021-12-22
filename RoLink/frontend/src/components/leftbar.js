@@ -9,6 +9,9 @@ import PanelButton from './panelButton'
 import './leftbar.css'
 
 
+let mySections = ['Feed', 'Profile', 'Friends']
+
+
 export default function LeftBar(props) {
 
     let navigate = useNavigate();
@@ -17,11 +20,17 @@ export default function LeftBar(props) {
 
     // Functions
 
+    let PanelButtons = mySections.map(element => {
+
+        return (
+            <PanelButton data={element}/>
+        )
+    })
 
     return (
-        <div id="LeftBar" className="LeftBar">
-            <ul>
-                <PanelButton/>
+        <div id="LeftBar" className="sidebar">
+            <ul className="nav-list">
+                {PanelButtons}
             </ul>
         </div>
     );

@@ -1,30 +1,28 @@
-.LeftBar {
-  height: 100vh;
-  width: 8%;
+/* Google Font Link */
+.sidebar {
   position: fixed;
-  z-index: -1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  margin-top: 4rem;
   background-color: white;
   /* Black*/
-  overflow-x: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidebar */
   -webkit-filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
           filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
+  padding: 6px 14px;
+  z-index: -1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-.LeftBar ul {
-  padding: 10px 10px;
+.sidebar .nav-list {
+  padding-left: 0px;
+  margin-top: 20px;
+  height: 100%;
 }
 
-.LeftBar ul li {
-  border-radius: 5px;
-  height: 50px;
-}
-
-.LeftBar.open {
-  width: 14rem;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+.sidebar.open {
+  width: 250px;
 }
 /*# sourceMappingURL=leftbar.css.map */

@@ -34,14 +34,33 @@ function App() {
 		console.log(document);
   }, [])
 
+  function HideText() {
+
+    let collection = document.getElementsByClassName('panelButton-text');
+  
+    for (let i = 0; i < collection.length; i++) {
+        let element = collection[i]
+
+        if (!sideBar) {
+          element.classList.add('hidden')
+        } else {
+          element.classList.remove('hidden')
+        }
+    }
+    console.log(document.getElementsByClassName('panelButton-text'))
+  }
+
 	function openModal(e) {
+    HideText()
 		document.getElementById('LeftBar').classList.add('open');
 		setSideBar(true);
 	}
 	function hideModal(e) {
+    HideText()
 		document.getElementById('LeftBar').classList.remove('open');
 		setSideBar(false);
 	}
+
 
 
 	// Functions

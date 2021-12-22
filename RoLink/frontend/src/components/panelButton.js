@@ -8,9 +8,16 @@ import './panelButton.css'
 
 
 
-import NewspaperIcon from '@mui/icons-material/Newspaper';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
+import AccountBoxIcon from '@mui/icons-material/AccountBoxOutlined';
+import PeopleAltIcon from '@mui/icons-material/PeopleAltOutlined';
 
+
+let mySections = {
+    'Feed': <ArticleOutlinedIcon/>,
+    'Profile': <AccountBoxIcon/>,
+    'Friends': <PeopleAltIcon/>
+}
 
 
 export default function PanelButton(props) {
@@ -23,9 +30,12 @@ export default function PanelButton(props) {
 
 
     return (
-        <li className="panelButton">
-            <NewspaperIcon sx={{ color: red[500] }}/>
-            <p>News feed</p>
+        <li id="panelButton" className="panelButton">
+            <a href="#">
+                {mySections[props.data]}
+                <span className="links_name">{props.data}</span>
+            </a>
+            <span className="tooltip">{props.data}</span>
         </li>
     );
 }

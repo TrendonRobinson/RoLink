@@ -1,25 +1,30 @@
-.LeftBar {
-    height: 100vh;
-    width: 8%;
+/* Google Font Link */
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+// *{
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   font-family: "Poppins" , sans-serif;
+// }
+.sidebar {
     position: fixed;
-    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    margin-top: 4rem;
     background-color: rgb(255, 255, 255); /* Black*/
-    overflow-x: hidden;
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
     filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
+    padding: 6px 14px;
+    z-index: -1;
+    transition: all 0.5s ease;
 
-    ul {
-        padding: 10px 10px;
-
-        li {
-            border-radius: 5px;
-
-            height: 50px;
-        }
+    .nav-list {
+        padding-left: 0px;
+        margin-top: 20px;
+        height: 100%;
     }
 }
-
-.LeftBar.open {
-    width: 14rem;
-    transition: 0.5s;
+.sidebar.open {
+    width: 250px;
 }
