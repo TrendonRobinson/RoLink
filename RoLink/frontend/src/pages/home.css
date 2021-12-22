@@ -1,0 +1,27 @@
+.homeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.homeContainer .LeftBar {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.homeContainer .Feed {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.homeContainer .RightBar {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+/*# sourceMappingURL=home.css.map */

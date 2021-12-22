@@ -20,35 +20,10 @@ import Register from './pages/Register';
 import Home from './pages/Home'
 
 
-function App() {
-  let [users, setUsers] = useState('')
-  let [account, setAccount] = useState(null)
-
-  function fetch() {
-    axios
-      .get("accounts/users/")
-      .then((res) => setUsers(res.data))
-      .catch((err) => console.log(err));
-  }
-
-  useEffect(() => {
-    fetch()
-  }, [])
-  
-
-  console.log(users)
-
+// Landing
+function Landing() {
   return (
-    <div className='App'>
-
-      <Routes>
-        {/* <Route path="/" element={<App />} /> */}
-        <Route path="login" element={<Login userState={[users, fetch]} fetch={fetch} account={[account, setAccount]}/>} />
-        <Route path="register" element={<Register />} />
-        <Route path="home" element={<Home />}/>
-      </Routes>
-
-        <div className="App-header">
+    <div className="App-header">
         <nav>
           <div className='Icon-Div'>
             <img src={icon} className="App-icon" alt="icon" />
@@ -63,10 +38,23 @@ function App() {
           <Link to='/register'>Get Started</Link>
         </div>
       </div>
+  )
+}
+
+
+function App() {
+  let [users, setUsers] = useState('')
+  let [account, setAccount] = useState(null)
+
+  return (
+    <div className='App'>
+      <Routes>
+        <Route path="" element={<Landing/>}/>
+        <Route path="login" element={<Login userState={[users, fetch]} fetch={fetch} account={[account, setAccount]}/>} />
+        <Route path="register" element={<Register />} />
+        <Route path="home" element={<Home />}/>
+      </Routes>
     </div>
-
-
-      
   );
 }
 

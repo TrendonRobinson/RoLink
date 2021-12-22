@@ -1,0 +1,16 @@
+.homeContainer {
+    display: flex;
+    width: 100%;
+
+    .LeftBar {
+        flex: 3;
+    }
+
+    .Feed {
+        flex: 5;
+    }
+
+    .RightBar {
+        flex: 4;
+    }
+}

@@ -23,9 +23,11 @@ export default function Login(props) {
   let account = accountTools[0]
   let setAccount = accountTools[1]
 
-  if (account !== null){
-    navigate(`/home`);
-  }
+  useEffect(() => {
+    if (localStorage.getItem('user') !== null){
+      navigate(`/home`);
+    }
+  }, [])
 
 
   // Functions
@@ -41,7 +43,10 @@ export default function Login(props) {
               }
           });
           if (resp) {
+            console.log(resp)
+            localStorage.setItem('user', resp.data.user.token)
             setAccount(account)
+            navigate(`/home`);
           }
       } catch (err) {
           console.error(err);

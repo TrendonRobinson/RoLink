@@ -21,7 +21,7 @@ schema
 .is().max(100)                                  // Maximum length 100
 .has().uppercase()                              // Must have uppercase letters
 .has().lowercase()                              // Must have lowercase letters
-// .has().digits(2)                                // Must have at least 2 digits
+// .has().digits(2)                             // Must have at least 2 digits
 .has().not().spaces()                           // Should not have spaces
 .is().not().oneOf(['Passw0rd', 'Password123']); // Blacklist these values
 
@@ -43,6 +43,12 @@ export default function Register(Props) {
         confirm: ""
     })
 
+    useEffect(() => {
+    if (localStorage.getItem('user') !== null){
+      navigate(`/home`);
+    }
+  }, [])
+
     // Functions
     const validateEmail = (e) => {
         var email = e.target.value
@@ -63,9 +69,6 @@ export default function Register(Props) {
         // console.log(canSubmit, inputs)
 
         if (canSubmit) {
-            // axios.post(url, inputs) // 4
-            //     .then(res => alert("Form Submitted")) // 5
-            //     .catch(errors => console.log(errors)) // 6
 
             const postRequest = async () => {
                 try {
@@ -142,7 +145,6 @@ export default function Register(Props) {
                             </div>
 
                             <div className="Field">
-                                {/* {validEmail ? '' : <p>Invalid Valid</p>} */}
                                 <input name="username"  onChange={handleChange} type="username" placeholder="Username" value={inputs.username} />
                             </div>
                             
