@@ -1,13 +1,19 @@
-import { Avatar, Button, Card } from '@mui/material';
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
+import Avatar from '@mui/material/Avatar';
+import Card from '@mui/material/Card';
+
+import './post.css'
+import { Button, InputLabel } from '@mui/material';
+
+// Icons
+import VideocamIcon from '@mui/icons-material/Videocam';
+import PersonIcon from '@mui/icons-material/Person';
 
 
-
-
-export default function RightBar(props) {
+export default function Post(props) {
 
     let navigate = useNavigate();
     
@@ -17,8 +23,8 @@ export default function RightBar(props) {
 
 
     return (
-        <div className="RightBar">
-           <Card className="RightBar-Wrapper">
+        <div className="Post">
+            <Card className="Post-Wrapper">
                 <h4>
                     Create Post
                 </h4>

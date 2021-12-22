@@ -162,7 +162,7 @@ export default function PrimarySearchAppBar(props) {
 
   return (
     <Box sx={{ flexGrow: 1}}>
-      <AppBar position="static" style={{ backgroundColor: '#ff3f3f' }}>
+      <AppBar className="AppBar-Class" position="static" style={{ backgroundColor: '#ff3f3f' }}>
         <Toolbar>
           <IconButton
             onClick={(e) => { props.sideBar[1](!props.sideBar[0], e); props.sideBar[2](!props.sideBar[0])}}
